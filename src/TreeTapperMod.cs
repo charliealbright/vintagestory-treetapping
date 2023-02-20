@@ -1,6 +1,6 @@
 using Vintagestory.API.Common;
 
-[assembly: ModInfo("TreeTapper",
+[assembly: ModInfo("treetapping",
     Description = "Tree Tapping!",
     Authors = new[]{ "ChaOS25" })]
 namespace TreeTapper {
