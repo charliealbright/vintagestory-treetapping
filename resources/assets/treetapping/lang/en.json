@@ -1,0 +1,10 @@
+{
+  "block-treetapper-*": "Tree tapping kit",
+  "item-tap": "Copper tree tap",
+  "itemcraftdesc-tap": "A specialized tool used for gathering resin from trees more quickly",
+
+  "itemdesc-tap": "A specialized tool used for gathering resin from trees more quickly. Combined with a wooden bucket to craft a <a href=\"handbook://block-treetapper-empty-north\">Tree Tapping Kit</a>.\n\nCan only be made using copper.",
+
+  "blockdesc-treetapper-*": "Set up this kit on a section of tree that is leaking <a href=\"handbook://item-resin\">Resin</a> to gather it more quickly. Once placed, check back often to collect the resin.",
+  "game:placefailure-blockalreadyattached": "Can't place more than one on this block"
+}

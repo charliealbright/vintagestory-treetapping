@@ -1,0 +1,9 @@
+C:\Users\albri\Desktop\treetapping\bin\Debug\net461\treetapper.dll
+C:\Users\albri\Desktop\treetapping\bin\Debug\net461\treetapper.pdb
+C:\Users\albri\Desktop\treetapping\obj\Debug\net461\treetapper.csproj.AssemblyReference.cache
+C:\Users\albri\Desktop\treetapping\obj\Debug\net461\treetapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\albri\Desktop\treetapping\obj\Debug\net461\treetapper.AssemblyInfoInputs.cache
+C:\Users\albri\Desktop\treetapping\obj\Debug\net461\treetapper.AssemblyInfo.cs
+C:\Users\albri\Desktop\treetapping\obj\Debug\net461\treetapper.csproj.CoreCompileInputs.cache
+C:\Users\albri\Desktop\treetapping\obj\Debug\net461\treetapper.dll
+C:\Users\albri\Desktop\treetapping\obj\Debug\net461\treetapper.pdb

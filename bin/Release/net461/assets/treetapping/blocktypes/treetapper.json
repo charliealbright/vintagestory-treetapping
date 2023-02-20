@@ -1,0 +1,49 @@
+{
+	"code": "treetapper",
+	"creativeinventory": { "general": ["*-north"] },
+	"behaviors": [
+		{
+			"name": "AttachRestricted",
+			"properties": {
+				"allowedBlocks": [
+					"game:log-resin-*",
+					"game:log-resinharvested-*"
+				]
+			}
+		}
+	],
+	"variantgroups": [
+		{
+			"code": "orientation", 
+			"loadFromProperties": "game:abstract/horizontalorientation"
+		}
+	],
+	"attributes": {
+		"handbook": {
+			"groupBy": ["treetapper-*"]
+		}
+	},
+	"blockmaterial": "Wood",
+	"drawtype": "json",
+	"shapebytype": {
+		"*-north": { "base": "block/wood/treetapper", "rotateY": 180 },
+		"*-east": { "base": "block/wood/treetapper", "rotateY": 90 },
+		"*-south": { "base": "block/wood/treetapper", "rotateY": 0 },
+		"*-west": { "base": "block/wood/treetapper", "rotateY": 270 }
+	},
+	"sidesolid": {
+		"all": "false"
+	},
+	"sideopaque": {
+		"all": "false"
+	},
+	"resistance": 2,
+	"sounds": {
+		"place": "game:block/planks",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	"replaceable": 5001,
+	"rainpermeable": true
+}

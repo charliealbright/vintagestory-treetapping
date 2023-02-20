@@ -1,0 +1,258 @@
+{
+  "code": "treetapper",
+  "creativeinventory": { "general": ["*-empty-north"] },
+  "entityClassByType": {
+    "treetapper-empty-*": "Transient",
+    "treetapper-third-*": "Transient",
+    "treetapper-twothird-*": "Transient"
+  },
+  "behaviors": [
+    {
+      "name": "AttachRestricted",
+      "properties": {
+        "allowedBlocks": ["game:log-resin-*", "game:log-resinharvested-*"]
+      }
+    }
+  ],
+  "behaviorsByType": {
+    "treetapper-third-*": [
+      {
+        "name": "Harvestable",
+        "properties": {
+          "harvestTime": 1,
+          "harvestedStack": {
+            "type": "item",
+            "code": "game:resin",
+            "quantity": {
+              "avg": 1
+            }
+          },
+          "harvestedBlockCode": "treetapper-empty-{orientation}"
+        }
+      }
+    ],
+    "treetapper-twothird-*": [
+      {
+        "name": "Harvestable",
+        "properties": {
+          "harvestTime": 1,
+          "harvestedStack": {
+            "type": "item",
+            "code": "game:resin",
+            "quantity": {
+              "avg": 3
+            }
+          },
+          "harvestedBlockCode": "treetapper-empty-{orientation}"
+        }
+      }
+    ],
+    "treetapper-full-*": [
+      {
+        "name": "Harvestable",
+        "properties": {
+          "harvestTime": 1,
+          "harvestedStack": {
+            "type": "item",
+            "code": "game:resin",
+            "quantity": {
+              "avg": 6
+            }
+          },
+          "harvestedBlockCode": "treetapper-empty-{orientation}"
+        }
+      }
+    ]
+  },
+  "variantgroups": [
+    {
+      "code": "state",
+      "states": ["empty", "third", "twothird", "full"]
+    },
+    {
+      "code": "orientation",
+      "loadFromProperties": "game:abstract/horizontalorientation"
+    }
+  ],
+  "attributes": {
+    "handbook": {
+      "groupBy": ["treetapper-*"]
+    }
+  },
+  "attributesByType": {
+    "treetapper-empty-*": {
+      "transientProps": {
+        "convertFrom": "treetapper-empty-{orientation}",
+        "convertTo": "treetapper-third-{orientation}",
+        "inGameHours": 8
+      }
+    },
+    "treetapper-third-*": {
+      "transientProps": {
+        "convertFrom": "treetapper-third-{orientation}",
+        "convertTo": "treetapper-twothird-{orientation}",
+        "inGameHours": 16
+      }
+    },
+    "treetapper-twothird-*": {
+      "transientProps": {
+        "convertFrom": "treetapper-twothird-{orientation}",
+        "convertTo": "treetapper-full-{orientation}",
+        "inGameHours": 24
+      }
+    }
+  },
+  "particlePropertiesByType": {
+    "*-full-*": [],
+    "*": [
+      {
+        "__comment": "Resin drip",
+        "hsvaColor": [
+          { "avg": 40, "var": 5 },
+          { "avg": 255, "var": 0 },
+          { "avg": 255, "var": 0 },
+          { "avg": 50, "var": 0 }
+        ],
+        "gravityEffect": { "avg": 0.8, "var": 0 },
+        "posOffsetByType": {
+          "*-north": [
+            { "avg": 0, "var": 0 },
+            { "avg": -0.175, "var": 0 },
+            { "avg": -0.01, "var": 0 }
+          ],
+          "*-east": [
+            { "avg": 0.01, "var": 0 },
+            { "avg": -0.175, "var": 0 },
+            { "avg": 0, "var": 0 }
+          ],
+          "*-south": [
+            { "avg": 0, "var": 0 },
+            { "avg": -0.175, "var": 0 },
+            { "avg": 0.01, "var": 0 }
+          ],
+          "*-west": [
+            { "avg": -0.01, "var": 0 },
+            { "avg": -0.175, "var": 0 },
+            { "avg": 0, "var": 0 }
+          ]
+        },
+        "velocity": [
+          { "avg": 0, "var": 0.1 },
+          { "avg": 0, "var": 0 },
+          { "avg": 0, "var": 0.1 }
+        ],
+        "quantity": { "avg": 0.015 },
+        "size": { "avg": 0.4, "var": 0 },
+        "lifeLength": { "avg": 0.075 },
+        "vertexFlags": 128,
+        "windAffectednes": 0
+      }
+    ]
+  },
+  "drops": [
+    {
+      "type": "block",
+      "code": "treetapper-empty-north",
+      "quantity": { "avg": 1 }
+    }
+  ],
+  "blockmaterial": "Wood",
+  "drawtype": "json",
+  "shapebytype": {
+    "*-north": { "base": "block/wood/treetapper-{state}", "rotateY": 0 },
+    "*-east": { "base": "block/wood/treetapper-{state}", "rotateY": 270 },
+    "*-south": { "base": "block/wood/treetapper-{state}", "rotateY": 180 },
+    "*-west": { "base": "block/wood/treetapper-{state}", "rotateY": 90 }
+  },
+  "sidesolid": {
+    "all": "false"
+  },
+  "sideopaque": {
+    "all": "false"
+  },
+  "resistance": 2,
+  "sounds": {
+    "place": "game:block/planks",
+    "hit": "game:block/planks",
+    "break": "game:block/planks",
+    "walk": "game:walk/wood"
+  },
+  "selectionboxbytype": {
+    "*-east": {
+      "x1": 0.25,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 0.75,
+      "y2": 0.725,
+      "z2": 1,
+      "rotateY": 90
+    },
+    "*-south": {
+      "x1": 0.25,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 0.75,
+      "y2": 0.725,
+      "z2": 1,
+      "rotateY": 0
+    },
+    "*-west": {
+      "x1": 0.25,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 0.75,
+      "y2": 0.725,
+      "z2": 1,
+      "rotateY": 270
+    },
+    "*-north": {
+      "x1": 0.25,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 0.75,
+      "y2": 0.725,
+      "z2": 1,
+      "rotateY": 180
+    }
+  },
+  "collisionboxbytype": {
+    "*-east": {
+      "x1": 0.25,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 0.75,
+      "y2": 0.725,
+      "z2": 1,
+      "rotateY": 90
+    },
+    "*-south": {
+      "x1": 0.25,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 0.75,
+      "y2": 0.725,
+      "z2": 1,
+      "rotateY": 0
+    },
+    "*-west": {
+      "x1": 0.25,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 0.75,
+      "y2": 0.725,
+      "z2": 1,
+      "rotateY": 270
+    },
+    "*-north": {
+      "x1": 0.25,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 0.75,
+      "y2": 0.725,
+      "z2": 1,
+      "rotateY": 180
+    }
+  },
+  "replaceable": 5001,
+  "rainpermeable": true
+}

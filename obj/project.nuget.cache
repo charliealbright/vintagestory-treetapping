@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4uEGI0tpR66uQd12H+5fmYhSi6CNK9PAyVEj89OQ2G3M5M3RmQmNd706gyWXLqHGsvCTw71VvcjjnZBtlJO3Rg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\albri\\Desktop\\treetapping\\treetapper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\albri\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\albri\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net461\\1.0.3\\microsoft.netframework.referenceassemblies.net461.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

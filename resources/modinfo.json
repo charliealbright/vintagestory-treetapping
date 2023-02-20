@@ -1,0 +1,14 @@
+{
+  "type": "content",
+  "modid": "treetapper",
+  "name": "Tree Tapping",
+  "description": "Tap leaking acacia and pine logs to generate resin more quickly",
+  "authors": ["ChaOS25"],
+  "version": "1.0.0",
+  "dependencies": {
+    "game": "*",
+    "survival": "*"
+  },
+  "website": "",
+  "side": "universal"
+}

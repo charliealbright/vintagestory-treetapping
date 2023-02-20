@@ -1,0 +1,19 @@
+{
+  "ingredient": {
+    "type": "item",
+    "code": "game:ingot-*",
+    "name": "metal",
+    "allowedVariants": ["copper"]
+  },
+  "pattern": [
+    [
+      "______##_______",
+      "__##########___",
+      "__#__________#_",
+      "____##########_",
+      "________##_____"
+    ]
+  ],
+  "name": "2 Tree Taps",
+  "output": { "type": "item", "code": "tap", "stacksize": 2 }
+}

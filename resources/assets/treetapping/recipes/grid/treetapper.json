@@ -1,0 +1,21 @@
+[
+  {
+    "ingredientPattern": "T,B",
+    "ingredients": {
+      "T": {
+        "type": "item",
+        "code": "tap"
+      },
+      "B": {
+        "type": "block",
+        "code": "game:woodbucket"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "output": {
+      "type": "block",
+      "code": "treetapper-empty-north"
+    }
+  }
+]
